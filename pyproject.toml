@@ -23,7 +23,7 @@ classifiers = [
 zodiac-gui = "zodiac_gui.app:main"
 
 [project.urls]
-Repository = "https://github.com/YOUR_USERNAME/zodiac-sign-finder"
+Repository = "https://github.com/Camerenjackson/zodiac-sign-finder"
 
 [build-system]
 requires = ["setuptools>=61"]

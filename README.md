@@ -38,7 +38,7 @@ Recommended files: `dashboard.png`, `form.png`
 ## Run locally
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/zodiac-sign-finder.git
+git clone https://github.com/Camerenjackson/zodiac-sign-finder.git
 cd zodiac-sign-finder
 python main.py
 ```
@@ -89,7 +89,7 @@ git add .
 git status
 git commit -m "Initial release: Zodiac Sign Finder v2"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/zodiac-sign-finder.git
+git remote add origin https://github.com/Camerenjackson/zodiac-sign-finder.git
 git push -u origin main
 ```
 
@@ -99,7 +99,7 @@ Use an **empty** new repo on GitHub (no README) so you do not get merge conflict
 
 - [ ] `git status` shows **no** `build/`, `dist/`, or `__pycache__/`
 - [ ] Screenshots added under `docs/screenshots/` (optional but great for portfolio)
-- [ ] Replace `YOUR_USERNAME` in this README and `pyproject.toml`
+- [x] Repo: https://github.com/Camerenjackson/zodiac-sign-finder
 
 ## Keyboard shortcuts
 

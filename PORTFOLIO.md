@@ -13,7 +13,7 @@ Copy and adapt:
 
 **Tech:** Python 3.10+, Tkinter, unittest, PyInstaller
 
-**Repo:** `https://github.com/YOUR_USERNAME/zodiac-sign-finder`
+**Repo:** https://github.com/Camerenjackson/zodiac-sign-finder
 
 ---
 
