@@ -1,113 +1,91 @@
 # Zodiac Sign Finder
 
-A **desktop zodiac & element finder** built with Python and Tkinter — refactored from a school-era CLI script into a portfolio-ready GUI with tests and an optional Windows `.exe`.
+Desktop application for **Western tropical zodiac** signs and elements from a birth month and day. Built with **Python 3** and **Tkinter**.
 
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Tests](https://img.shields.io/badge/tests-16%20passing-brightgreen)
 
-<!-- Portfolio: replace with your screenshot after adding docs/screenshots/dashboard.png -->
-![App dashboard](docs/screenshots/dashboard-preview.png)
+![Zodiac Sign Finder — Capricorn result](docs/screenshots/dashboard.png)
 
-> **Portfolio:** Add your own screenshots under [`docs/screenshots/`](docs/screenshots/README.md), then update the image path above. See [`PORTFOLIO.md`](PORTFOLIO.md) for LinkedIn copy.
+## Overview
 
-## Highlights
-
-- **Live preview** — sign updates as you change month or day (slider + spinner)
-- **Professional UI** — sidebar inputs, large result panel, element badges, status bar
-- **Solid logic** — Western tropical zodiac boundaries, input validation, 16 unit tests
-- **Offline & private** — no network, no database, no accounts
-- **Shippable** — `build.ps1` produces `ZodiacSignFinder.exe` via PyInstaller
+Zodiac Sign Finder validates birth dates, maps them to the correct sign using standard tropical zodiac date boundaries, and presents the sign symbol, element, date range, and a short element description. The interface updates live as the user changes month or day.
 
 ## Features
 
-- Month dropdown and day controls with per-month max days
-- Zodiac symbol, sign period, and element personality text
-- Element legend (Fire / Earth / Air / Water)
-- Copy result to clipboard (`Ctrl+C`)
-- Menu bar (File, Help)
+- Live preview while adjusting month and day (dropdown, spinner, slider)
+- Result panel with zodiac symbol, element badge, and sign date range
+- Sidebar element reference (Fire, Earth, Air, Water)
+- Input validation (per-month day limits, required fields)
+- Copy formatted result to clipboard
+- Optional Windows executable via PyInstaller
 
-## Screenshots (for your portfolio)
+## Requirements
 
-| | |
-|---|---|
-| Place your captures in `docs/screenshots/` | See [screenshot guide](docs/screenshots/README.md) |
+- Python **3.10+**
+- **tkinter** (included with the standard Python installer on Windows)
 
-Recommended files: `dashboard.png`, `form.png`
+## Installation
 
-## Run locally
-
-```powershell
+```bash
 git clone https://github.com/Camerenjackson/zodiac-sign-finder.git
 cd zodiac-sign-finder
+```
+
+## Usage
+
+```bash
 python main.py
 ```
 
-Requirements: **Python 3.10+** with **tkinter** ([python.org](https://www.python.org/)).
+Or run as a module:
 
-```powershell
+```bash
 python -m zodiac_gui
-python -m unittest discover -s tests -v
 ```
 
-## Build Windows `.exe`
-
-```powershell
-.\build.ps1
-```
-
-Output: `dist\ZodiacSignFinder.exe` — ideal for a GitHub **Release** asset (do not commit `dist/`).
-
-## Project structure
-
-```
-zodiac-sign-finder/
-├── zodiac_gui/              # Application package
-│   ├── app.py               # Tkinter GUI
-│   ├── zodiac_logic.py      # Sign lookup & validation
-│   └── theme.py
-├── tests/
-├── docs/screenshots/        # Portfolio images (you add PNGs here)
-├── main.py
-├── build.ps1
-├── PORTFOLIO.md             # LinkedIn / resume blurbs
-└── README.md
-```
-
-## Security & privacy
-
-- No network access
-- Birth date stays in memory only while the app runs
-- See [SECURITY.md](SECURITY.md)
-
-## Connect this repo to GitHub
-
-```powershell
-cd zodiac-sign-finder
-git init
-git add .
-git status
-git commit -m "Initial release: Zodiac Sign Finder v2"
-git branch -M main
-git remote add origin https://github.com/Camerenjackson/zodiac-sign-finder.git
-git push -u origin main
-```
-
-Use an **empty** new repo on GitHub (no README) so you do not get merge conflicts.
-
-### Before you push
-
-- [ ] `git status` shows **no** `build/`, `dist/`, or `__pycache__/`
-- [ ] Screenshots added under `docs/screenshots/` (optional but great for portfolio)
-- [x] Repo: https://github.com/Camerenjackson/zodiac-sign-finder
-
-## Keyboard shortcuts
+### Keyboard shortcuts
 
 | Key | Action |
 |-----|--------|
 | `Enter` | Calculate / refresh |
 | `Ctrl+C` | Copy result |
 | `Alt+F4` | Exit |
+
+## Tests
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+## Build (Windows executable)
+
+```powershell
+.\build.ps1
+```
+
+Produces `dist\ZodiacSignFinder.exe`. Build artifacts are not committed to the repository; publish binaries via [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) if desired.
+
+## Project structure
+
+```
+zodiac-sign-finder/
+├── zodiac_gui/
+│   ├── app.py            # Tkinter application
+│   ├── zodiac_logic.py   # Sign lookup and validation
+│   └── theme.py          # UI tokens
+├── tests/
+│   └── test_zodiac_logic.py
+├── docs/screenshots/
+├── main.py
+├── build.ps1
+└── pyproject.toml
+```
+
+## Privacy
+
+The application does not use the network and does not persist birth dates to disk. Data exists only in memory for the duration of the session. See [SECURITY.md](SECURITY.md) for more detail.
 
 ## License
 
